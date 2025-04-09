@@ -167,7 +167,7 @@ export const content: IContent[] = [
     },
     {
         icon: <IDesserts />,
-        body: 'Десерты и выпечка',
+        body: 'Десерты, выпечка',
         description: [
             {
                 section: 'Блины и оладьи',
@@ -410,7 +410,7 @@ export const content: IContent[] = [
     },
     {
         icon: <INational />,
-        body: 'Национальные блюда',
+        body: 'Национальные',
         description: [
             {
                 section: 'Американская кухня',

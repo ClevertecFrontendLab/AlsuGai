@@ -1,7 +1,8 @@
 import './App.css';
 
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Flex } from '@chakra-ui/react';
 
+import Footer from '~/components/Footer/Footer.tsx';
 import Header from '~/components/Header.tsx/Header';
 import Navigation from '~/components/Navigation/Navigation.tsx';
 import { useGetPostsQuery } from '~/query/services/posts.ts';
@@ -15,9 +16,10 @@ function App() {
         <>
             <ChakraProvider theme={theme}>
                 <Header />
-                <div>
+                <Flex direction='column'>
                     <Navigation />
-                </div>
+                    <Footer />
+                </Flex>
             </ChakraProvider>
         </>
     );

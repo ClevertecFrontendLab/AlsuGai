@@ -1,0 +1,31 @@
+.nav {
+    width: 256px;
+    height: calc(100vh - 144px - 80px);
+    overflow-y: auto;
+    margin-top: 24px;
+    padding: 0 16px 0px 10px;
+    border-radius: 12px;
+}
+
+.category {
+    color: black;
+    font-weight: 500;
+    border: none;
+    text-wrap: none;
+}
+
+.section {
+    text-wrap: none;
+}
+
+.line {
+    border-left: 1px solid #c4ff61;
+}
+
+.sectionText {
+    text-wrap: none;
+}
+
+h2 {
+    font-weight: 500;
+}
