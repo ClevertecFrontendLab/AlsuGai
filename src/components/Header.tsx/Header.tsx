@@ -15,33 +15,39 @@ import LogoDesktop from '../../assets/images/logo-desktop.svg';
 
 function Header() {
     return (
-        <Flex bgColor='lime.50' data-test-id='header'>
-            <Image src={LogoDesktop} />
-            <Breadcrumb spacing='8px' separator={<ChevronRightIcon />}>
-                <BreadcrumbItem>
-                    <BreadcrumbLink href='#'>Главная</BreadcrumbLink>
-                </BreadcrumbItem>
+        <header className='header'>
+            <Flex
+                data-test-id='header'
+                h={20}
+                py={4}
+                justifyContent='space-between'
+                alignItems='center'
+                pl={4}
+                pr={14}
+                className='container'
+            >
+                <Flex alignItems='center'>
+                    <Image src={LogoDesktop} pr={32} />
 
-                <BreadcrumbItem>
-                    <BreadcrumbLink href='#'>Веганская кухня</BreadcrumbLink>
-                </BreadcrumbItem>
-
-                <BreadcrumbItem isCurrentPage>
-                    <BreadcrumbLink href='#'>Самое сочное</BreadcrumbLink>
-                </BreadcrumbItem>
-            </Breadcrumb>
-            <Stack gap='4'>
-                <HStack>
-                    <Avatar src='../../src/assets/images/ekaterina_photo.png' />
-                    <Stack gap='0'>
-                        <Text fontWeight='medium'>Екатерина Константинопольская</Text>
-                        <Text color='fg.muted' textStyle='sm'>
-                            @bake_and_pie
-                        </Text>
-                    </Stack>
-                </HStack>
-            </Stack>
-        </Flex>
+                    <Breadcrumb spacing='8' separator={<ChevronRightIcon />}>
+                        <BreadcrumbItem isCurrentPage>
+                            <BreadcrumbLink href='#'>Главная</BreadcrumbLink>
+                        </BreadcrumbItem>
+                    </Breadcrumb>
+                </Flex>
+                <Stack gap='4'>
+                    <HStack>
+                        <Avatar src='../../src/assets/images/avatars/ekaterina_photo.png' />
+                        <Stack gap='0'>
+                            <Text fontWeight='500'>Екатерина Константинопольская</Text>
+                            <Text color='fg.muted' textStyle='sm'>
+                                @bake_and_pie
+                            </Text>
+                        </Stack>
+                    </HStack>
+                </Stack>
+            </Flex>
+        </header>
     );
 }
 
