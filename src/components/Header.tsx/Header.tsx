@@ -31,7 +31,9 @@ function Header() {
 
                     <Breadcrumb spacing='8' separator={<ChevronRightIcon />}>
                         <BreadcrumbItem isCurrentPage>
-                            <BreadcrumbLink href='#'>Главная</BreadcrumbLink>
+                            <BreadcrumbLink fontSize='md' href='#'>
+                                Главная
+                            </BreadcrumbLink>
                         </BreadcrumbItem>
                     </Breadcrumb>
                 </Flex>
@@ -39,8 +41,10 @@ function Header() {
                     <HStack>
                         <Avatar src='../../src/assets/images/avatars/ekaterina_photo.png' />
                         <Stack gap='0'>
-                            <Text fontWeight='500'>Екатерина Константинопольская</Text>
-                            <Text color='fg.muted' textStyle='sm'>
+                            <Text as='b' fontWeight='medium' fontSize='lg'>
+                                Екатерина Константинопольская
+                            </Text>
+                            <Text color='blackAlpha.700' fontSize='sm' fontWeight='normal'>
                                 @bake_and_pie
                             </Text>
                         </Stack>

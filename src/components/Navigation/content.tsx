@@ -26,6 +26,7 @@ interface IContent {
     body: string;
     description: IDescriptionItem[];
     id: number;
+    dataTestId: string;
 }
 
 export const content: IContent[] = [
@@ -51,6 +52,7 @@ export const content: IContent[] = [
             },
         ],
         id: 1,
+        dataTestId: '',
     },
     {
         icon: <ISnacks />,
@@ -82,6 +84,7 @@ export const content: IContent[] = [
             },
         ],
         id: 2,
+        dataTestId: '',
     },
     {
         icon: <IEntree />,
@@ -109,6 +112,7 @@ export const content: IContent[] = [
             },
         ],
         id: 3,
+        dataTestId: '',
     },
     {
         icon: <ISecondDish />,
@@ -164,6 +168,7 @@ export const content: IContent[] = [
             },
         ],
         id: 4,
+        dataTestId: '',
     },
     {
         icon: <IDesserts />,
@@ -223,6 +228,7 @@ export const content: IContent[] = [
             },
         ],
         id: 5,
+        dataTestId: '',
     },
     {
         icon: <IGrill />,
@@ -293,6 +299,7 @@ export const content: IContent[] = [
             },
         ],
         id: 7,
+        dataTestId: 'juiciest-link',
     },
     {
         icon: <IKids />,
@@ -332,6 +339,7 @@ export const content: IContent[] = [
             },
         ],
         id: 8,
+        dataTestId: '',
     },
     {
         icon: <IHealth />,
@@ -407,6 +415,7 @@ export const content: IContent[] = [
             },
         ],
         id: 9,
+        dataTestId: '',
     },
     {
         icon: <INational />,
@@ -470,6 +479,7 @@ export const content: IContent[] = [
             },
         ],
         id: 10,
+        dataTestId: '',
     },
     {
         icon: <ISause />,
@@ -489,6 +499,7 @@ export const content: IContent[] = [
             },
         ],
         id: 11,
+        dataTestId: '',
     },
     {
         icon: <IDrinks />,
@@ -532,6 +543,7 @@ export const content: IContent[] = [
             },
         ],
         id: 12,
+        dataTestId: '',
     },
     {
         icon: <IJar />,
@@ -571,5 +583,6 @@ export const content: IContent[] = [
             },
         ],
         id: 13,
+        dataTestId: '',
     },
 ];

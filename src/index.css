@@ -2,16 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Inter;
     overflow-y: visible;
 }
 
 @font-face {
     font-family: 'Inter';
-    src:
-        url('../public/fonts/Inter-Regular.eot') format('eot'),
-        url('../public/fonts/Inter-Regular.woff') format('woff'),
-        url('../public/fonts/Inter-Regular.woff2') format('woff2');
+    src: url('../public/fonts/Inter.var.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
 }
 
 :root {

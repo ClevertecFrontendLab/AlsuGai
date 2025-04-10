@@ -20,6 +20,7 @@ function Navigation() {
                     <AccordionItem key={item.id} className={styles.category}>
                         <h2>
                             <AccordionButton
+                                data-test-id={item.dataTestId}
                                 _expanded={{ bg: 'lime.100' }}
                                 py='12px'
                                 px='8px'

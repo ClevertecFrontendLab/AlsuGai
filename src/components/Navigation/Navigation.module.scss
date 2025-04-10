@@ -2,8 +2,7 @@
     width: 256px;
     height: calc(100vh - 144px - 80px);
     overflow-y: auto;
-    margin-top: 24px;
-    padding: 0 16px 0px 10px;
+    padding: 24px 16px 0px 10px;
     border-radius: 12px;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .section {
-    text-wrap: none;
+    text-wrap: nowrap;
 }
 
 .line {
@@ -23,7 +22,7 @@
 }
 
 .sectionText {
-    text-wrap: none;
+    text-wrap: nowrap;
 }
 
 h2 {
