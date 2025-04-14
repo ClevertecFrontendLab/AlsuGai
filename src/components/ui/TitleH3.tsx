@@ -5,12 +5,12 @@ export interface TitleProps extends TextProps {
     children?: ReactNode;
 }
 
-function Title({ children }: TextProps) {
+function TitleH3({ children }: TextProps) {
     return (
-        <Text as='h1' fontSize={{ base: '2xl', xl: '5xl' }} fontWeight='bold'>
+        <Text as='h3' fontSize='xl' fontWeight='medium' isTruncated>
             {children}
         </Text>
     );
 }
 
-export default Title;
+export default TitleH3;

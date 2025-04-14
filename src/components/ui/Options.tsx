@@ -1,4 +1,4 @@
-import { Checkbox, Select } from '@chakra-ui/react';
+import { Select } from '@chakra-ui/react';
 
 export interface ISelectOption {
     value: string;
@@ -13,13 +13,17 @@ function Options() {
     ];
 
     return (
-        <Select placeholder='Выберите из списка...' variant='outline'>
+        <Select
+            placeholder='Выберите из списка...'
+            variant='outline'
+            border='1px solid rgba(0, 0, 0, 0.08)'
+            color='blackAlpha.700'
+            _hover={{ borderColor: 'lime.300' }}
+        >
             {options.map((option) => (
-                <Checkbox size='sm' colorScheme='red'>
-                    <option value={option.value} key={option.value}>
-                        {option.label}
-                    </option>
-                </Checkbox>
+                <option value={option.value} key={option.value}>
+                    {option.label}
+                </option>
             ))}
         </Select>
     );

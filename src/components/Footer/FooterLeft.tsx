@@ -1,12 +1,12 @@
-import { Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 
 import { IExit } from '~/assets/icons/icons';
 
-import styles from './Footer.module.scss';
+import styles from './FooterLeft.module.scss';
 
-function Footer() {
+function FooterLeft() {
     return (
-        <footer className={styles.footer}>
+        <Box as='footer' className={styles.footer}>
             <Flex gap={4} direction='column'>
                 <Text fontSize='xs' color='blackAlpha.400'>
                     Версия программы 03.25
@@ -20,8 +20,8 @@ function Footer() {
                     </Flex>
                 </button>
             </Flex>
-        </footer>
+        </Box>
     );
 }
 
-export default Footer;
+export default FooterLeft;

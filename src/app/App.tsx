@@ -1,17 +1,15 @@
 import './App.css';
 
-import { ChakraProvider, Flex } from '@chakra-ui/react';
+import { Show } from '@chakra-ui/icons';
+import { ChakraProvider } from '@chakra-ui/react';
 
-import Footer from '~/components/Footer/Footer.tsx';
 import Header from '~/components/Header.tsx/Header';
-import Intro from '~/components/Intro/Intro.tsx';
-import Likes from '~/components/Likes/Likes.tsx';
 import Navigation from '~/components/Navigation/Navigation.tsx';
-import NewRecipes from '~/components/NewRecipes/NewRecipes.tsx';
-import WriteButton from '~/components/WriteButton.tsx/WriteButton.tsx';
+import RigthAside from '~/components/RigthAside/RigthAside';
+import { Main } from '~/layout/pages/Main';
 import { useGetPostsQuery } from '~/query/services/posts.ts';
 
-import theme from '../../chakra.config.ts';
+import theme from '../../chakra.config';
 
 function App() {
     const { data: _data, isLoading: _isLoading } = useGetPostsQuery();
@@ -20,27 +18,12 @@ function App() {
         <>
             <ChakraProvider theme={theme}>
                 <Header />
-                <Flex justifyContent='space-between' className='container'>
-                    <Flex direction='column'>
-                        <Navigation />
-                        <Footer />
-                    </Flex>
-                    <main>
-                        <Flex direction='column'>
-                            <Intro titleText='Приятного аппетита!' />
-                            <NewRecipes />
-                        </Flex>
-                    </main>
-                    <Flex
-                        width='208px'
-                        direction='column'
-                        alignItems='end'
-                        justifyContent='space-between'
-                    >
-                        <Likes />
-                        <WriteButton />
-                    </Flex>
-                </Flex>
+                <Main />
+                <Show above='xl'>
+                    <Navigation />
+                    <RigthAside />
+                </Show>
+                <Show below='xl'></Show>
             </ChakraProvider>
         </>
     );

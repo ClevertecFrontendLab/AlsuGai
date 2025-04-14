@@ -1,57 +1,76 @@
-import { ChevronRightIcon } from '@chakra-ui/icons';
-import {
-    Avatar,
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    Flex,
-    HStack,
-    Image,
-    Stack,
-    Text,
-} from '@chakra-ui/react';
+import { Box, Hide, Show, Spacer } from '@chakra-ui/icons';
+import { Flex, HStack } from '@chakra-ui/react';
+import { NavLink } from 'react-router';
 
-import LogoDesktop from '../../assets/images/logo-desktop.svg';
+import { IAvatar, IBookMark, ILogoMDesk, ILogoMobi, ISmile } from '~/assets/icons/icons';
+
+import User from '../../assets/images/avatars/ekaterina_photo.png';
+import { Breadcrumbs } from '../Breadcrumbs';
+import { BurgerMenu } from '../BurgerMenu';
+import { AvatarWithName } from '../ui/AvatarWithName';
+import { IconWithCounter } from '../ui/IconsWithCount';
 
 function Header() {
     return (
-        <header className='header'>
-            <Flex
-                data-test-id='header'
-                h={20}
-                py={4}
-                justifyContent='space-between'
-                alignItems='center'
-                pl={4}
-                pr={14}
-                className='container'
-            >
-                <Flex alignItems='center'>
-                    <Image src={LogoDesktop} pr={32} />
-
-                    <Breadcrumb spacing='8' separator={<ChevronRightIcon />}>
-                        <BreadcrumbItem isCurrentPage>
-                            <BreadcrumbLink fontSize='md' href='#'>
-                                Главная
-                            </BreadcrumbLink>
-                        </BreadcrumbItem>
-                    </Breadcrumb>
-                </Flex>
-                <Stack gap='4'>
-                    <HStack>
-                        <Avatar src='../../src/assets/images/avatars/ekaterina_photo.png' />
-                        <Stack gap='0'>
-                            <Text as='b' fontWeight='medium' fontSize='lg'>
-                                Екатерина Константинопольская
-                            </Text>
-                            <Text color='blackAlpha.700' fontSize='sm' fontWeight='normal'>
-                                @bake_and_pie
-                            </Text>
-                        </Stack>
-                    </HStack>
-                </Stack>
-            </Flex>
-        </header>
+        <Flex
+            pl='4'
+            as='header'
+            h={{ base: '64px', xl: '80px' }}
+            bg='lime.50'
+            align='center'
+            pos='fixed'
+            top='0'
+            right='0'
+            left='0'
+            data-test-id='header'
+            zIndex={10}
+        >
+            <NavLink to='/'>
+                <Show above='md'>
+                    <ILogoMDesk />
+                </Show>
+                <Hide above='md'>
+                    <ILogoMobi />
+                </Hide>
+            </NavLink>
+            <Show above='xl'>
+                <Box>
+                    <Breadcrumbs />
+                </Box>
+                <Spacer />
+                <Box mr='20'>
+                    <AvatarWithName
+                        name='Екатерина Константинопольская'
+                        login='@bake_and_pie'
+                        src={User}
+                    />
+                </Box>
+            </Show>
+            <Hide above='xl'>
+                <Spacer />
+                <HStack px={{ base: '8px', sm: '12px' }} spacing={0}>
+                    <IconWithCounter
+                        icon={<IBookMark />}
+                        count={185}
+                        spacing='6px'
+                        padding='4px 8px'
+                    />
+                    <IconWithCounter
+                        icon={<IAvatar />}
+                        count={589}
+                        spacing='6px'
+                        padding='4px 8px'
+                    />
+                    <IconWithCounter
+                        icon={<ISmile />}
+                        count={587}
+                        spacing='6px'
+                        padding='4px 8px'
+                    />
+                </HStack>
+                <BurgerMenu />
+            </Hide>
+        </Flex>
     );
 }
 
