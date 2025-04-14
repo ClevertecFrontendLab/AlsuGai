@@ -1,34 +1,22 @@
-import { Box, Card, CardBody, Flex, Image, Stack, Text } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+import { Box, Card, CardBody, Flex, Image, Stack } from '@chakra-ui/react';
+import { JSX } from 'react';
 
 import { CategoryName } from './CategoryName';
+import { IconWithCounter } from './IconsWithCount';
+import { IconCounterProps } from './IconsWithCount';
 import { TitleCards } from './TitleCards';
 
 interface IContent {
     image: string;
     name: string;
     text: string;
-    icon: ReactNode;
+    icon: () => JSX.Element;
+    iconCounters: IconCounterProps[];
     category: string;
-    iconSave?: ReactNode;
-    save?: string;
-    iconLikes?: ReactNode;
-    likes?: string;
     bgColorTag: string;
 }
 
-function CardNewRecipes({
-    image,
-    name,
-    text,
-    icon,
-    category,
-    save,
-    likes,
-    iconLikes,
-    iconSave,
-    bgColorTag,
-}: IContent) {
+function CardNewRecipes({ image, name, text, icon, category, bgColorTag, iconCounters }: IContent) {
     return (
         <Card
             borderRadius='8px'
@@ -57,18 +45,10 @@ function CardNewRecipes({
                     <Flex justifyContent='space-between'>
                         <CategoryName icon={icon} category={category} bgColor={bgColorTag} />
                         <Flex gap='6px'>
-                            <Flex gap='3' justify='center' alignItems='center' mx='1'>
-                                {iconSave}
-                                <Text color='lime.600' fontWeight='600'>
-                                    {save}
-                                </Text>
-                            </Flex>
-                            <Flex gap='3' justify='center' alignItems='center' mx='1'>
-                                {iconLikes}
-                                <Text color='lime.600' fontWeight='600'>
-                                    {likes}
-                                </Text>
-                            </Flex>
+                            {!!iconCounters.length &&
+                                iconCounters.map((i, index) => (
+                                    <IconWithCounter key={index} {...i} />
+                                ))}
                         </Flex>
                     </Flex>
                 </Stack>

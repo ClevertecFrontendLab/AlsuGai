@@ -2,7 +2,7 @@ import { Box, Hide, Show, Spacer } from '@chakra-ui/icons';
 import { Flex, HStack } from '@chakra-ui/react';
 import { NavLink } from 'react-router';
 
-import { IAvatar, IBookMark, ILogoMDesk, ILogoMobi, ISmile } from '~/assets/icons/icons';
+import { BookmarkHeart, EmojiHeartEyes, ILogoMDesk, ILogoMobi, People } from '~/assets/icons/icons';
 
 import User from '../../assets/images/avatars/ekaterina_photo.png';
 import { Breadcrumbs } from '../Breadcrumbs';
@@ -50,19 +50,14 @@ function Header() {
                 <Spacer />
                 <HStack px={{ base: '8px', sm: '12px' }} spacing={0}>
                     <IconWithCounter
-                        icon={<IBookMark />}
+                        icon={BookmarkHeart}
                         count={185}
                         spacing='6px'
                         padding='4px 8px'
                     />
+                    <IconWithCounter icon={People} count={589} spacing='6px' padding='4px 8px' />
                     <IconWithCounter
-                        icon={<IAvatar />}
-                        count={589}
-                        spacing='6px'
-                        padding='4px 8px'
-                    />
-                    <IconWithCounter
-                        icon={<ISmile />}
+                        icon={EmojiHeartEyes}
                         count={587}
                         spacing='6px'
                         padding='4px 8px'

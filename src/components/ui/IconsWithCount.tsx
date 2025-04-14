@@ -1,9 +1,9 @@
-import { HStack, Text } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+import { HStack, Icon, Text } from '@chakra-ui/react';
+import { JSX } from 'react';
 
 export type IconCounterProps = {
     count: number;
-    icon: ReactNode;
+    icon: () => JSX.Element;
     spacing: string;
     padding: string;
     fontSize?: string;
@@ -16,7 +16,7 @@ export const IconWithCounter = ({
     fontSize = 'xs',
 }: IconCounterProps) => (
     <HStack spacing={spacing} p={padding}>
-        {icon}
+        <Icon as={icon} />
         <Text as='span' color='lime.600' fontWeight='medium' fontSize={fontSize}>
             {count}
         </Text>

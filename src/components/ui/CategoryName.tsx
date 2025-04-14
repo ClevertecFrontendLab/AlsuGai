@@ -1,8 +1,9 @@
+import { Icon } from '@chakra-ui/icons';
 import { Flex, Text } from '@chakra-ui/react';
-import { ReactNode } from 'react';
+import { JSX } from 'react';
 
 type Props = {
-    icon: ReactNode;
+    icon: () => JSX.Element;
     category: string;
     bgColor: string;
     mobilePos?: 'absolute' | 'relative' | 'fixed' | 'sticky' | 'static';
@@ -18,8 +19,7 @@ export const CategoryName = ({ icon, category, bgColor, mobilePos = 'absolute' }
         top='8px'
         left='8px'
     >
-        {icon}
-
+        <Icon as={icon} />
         <Text
             as='span'
             flex='1'

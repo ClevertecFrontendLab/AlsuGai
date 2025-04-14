@@ -12,19 +12,7 @@ function NewRecipes() {
             <Box pos='relative' mt={{ base: '0.75rem', lg: '1.5rem' }}>
                 <Flex gap={{ base: '12px', '2xl': '24px' }} overflow='hidden'>
                     {content.map((item) => (
-                        <CardNewRecipes
-                            key={item.id}
-                            image={item.image}
-                            name={item.name}
-                            text={item.text}
-                            icon={item.icon}
-                            category={item.category}
-                            save={item.save}
-                            likes={item.likes}
-                            iconLikes={item.iconLikes}
-                            iconSave={item.iconSave}
-                            bgColorTag={item.bgColorTag}
-                        />
+                        <CardNewRecipes key={item.id} {...item} />
                     ))}
                 </Flex>
                 <Show above='xl'>

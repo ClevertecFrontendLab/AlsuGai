@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from '@chakra-ui/react';
 
-import { IExit } from '~/assets/icons/icons';
+import { LogOut } from '~/assets/icons/icons';
 
 import styles from './FooterLeft.module.scss';
 
@@ -16,7 +16,7 @@ function FooterLeft() {
                 </Text>
                 <button className={styles.button}>
                     <Flex justify='left' alignItems='center' gap='1.5'>
-                        <IExit /> Выйти
+                        <LogOut /> Выйти
                     </Flex>
                 </button>
             </Flex>

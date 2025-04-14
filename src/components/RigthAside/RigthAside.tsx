@@ -1,7 +1,7 @@
 import { Center, Spacer } from '@chakra-ui/icons';
 import { IconButton, Text, VStack } from '@chakra-ui/react';
 
-import { IAvatar, IBookMark, ISmile, IWrite } from '~/assets/icons/icons';
+import { AddRecipe, BookmarkHeart, EmojiHeartEyes, People } from '~/assets/icons/icons';
 
 import { IconWithCounter } from '../ui/IconsWithCount';
 
@@ -10,21 +10,21 @@ function RigthAside() {
         <VStack position='fixed' right={0} bottom={0} top={{ base: '64px', xl: '80px' }} w='208px'>
             <VStack spacing='6' pt='4'>
                 <IconWithCounter
-                    icon={<IBookMark />}
+                    icon={BookmarkHeart}
                     count={185}
                     spacing='8px'
                     padding='8px 16px'
                     fontSize='md'
                 />
                 <IconWithCounter
-                    icon={<IAvatar />}
+                    icon={People}
                     count={589}
                     spacing='8px'
                     padding='8px 16px'
                     fontSize='md'
                 />
                 <IconWithCounter
-                    icon={<ISmile />}
+                    icon={EmojiHeartEyes}
                     count={587}
                     spacing='8px'
                     padding='8px 16px'
@@ -45,9 +45,9 @@ function RigthAside() {
                         _hover={{ bg: 'blackAlpha.800' }}
                         aria-label='Добавить рецепт'
                         boxSize='48px'
-                    >
-                        <IWrite />
-                    </IconButton>
+                        icon={<AddRecipe />}
+                    />
+
                     <Text fontSize='xs' color='blackAlpha.700'>
                         Записать рецепт
                     </Text>

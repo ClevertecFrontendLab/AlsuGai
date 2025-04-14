@@ -1,10 +1,12 @@
 import { AccordionPanel, Box, Icon, ListItem, UnorderedList } from '@chakra-ui/icons';
 import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons';
 import { AccordionButton, AccordionItem } from '@chakra-ui/react';
-import { ReactNode, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { JSX } from 'react';
 import { Link, useLocation } from 'react-router';
+
 type Props = {
-    icon: ReactNode;
+    icon: () => JSX.Element;
     body: string;
     listItems: string[];
     linkTo?: string;
@@ -46,7 +48,7 @@ export const NavigationItem = ({ icon, body, listItems, linkTo = '/' }: Props) =
                                 }}
                                 p='12px 8px'
                             >
-                                {icon}
+                                <Icon as={icon} boxSize='24px' />
                                 <Box flex='1' textAlign='left' ml='12px'>
                                     {body}
                                 </Box>
@@ -58,7 +60,7 @@ export const NavigationItem = ({ icon, body, listItems, linkTo = '/' }: Props) =
                             </AccordionButton>
                         </h3>
                         <AccordionPanel p={0}>
-                            <UnorderedList ml={0}>
+                            <UnorderedList ml={0} display='flex' flexDirection='column'>
                                 {listItems.map((item, index) => (
                                     <ListItem
                                         key={index}

@@ -1,23 +1,23 @@
-import { ReactNode } from 'react';
+import { ComponentWithAs, IconProps } from '@chakra-ui/icons';
 
 import {
-    IDesserts,
-    IDrinks,
-    IEntree,
-    IGrill,
-    IHealth,
-    IJar,
-    IKids,
-    INational,
-    ISalad,
-    ISause,
-    ISecondDish,
-    ISnacks,
-    IVegan,
+    Desserts,
+    Drinks,
+    FirstCourses,
+    Grils,
+    KidsCourses,
+    National,
+    Preparations,
+    Salads,
+    Sauces,
+    SecondCourses,
+    Snacks,
+    TherapeuticNutrition,
+    Vegan,
 } from '~/assets/icons/icons';
 
 interface IContent {
-    icon: ReactNode;
+    icon: ComponentWithAs<'svg', IconProps>;
     body: string;
     listItems: string[];
     id: number;
@@ -27,13 +27,13 @@ interface IContent {
 
 export const content: IContent[] = [
     {
-        icon: <ISalad />,
+        icon: Salads,
         body: 'Салаты',
         listItems: ['Мясные салаты', 'Рыбные салаты', 'Овощные салаты', 'Теплые салаты'],
         id: 1,
     },
     {
-        icon: <ISnacks />,
+        icon: Snacks,
         body: 'Закуски',
         listItems: [
             'Мясные закуски',
@@ -46,7 +46,7 @@ export const content: IContent[] = [
         id: 2,
     },
     {
-        icon: <IEntree />,
+        icon: FirstCourses,
         body: 'Первые блюда',
         listItems: [
             'Мясные супы',
@@ -60,7 +60,7 @@ export const content: IContent[] = [
         id: 3,
     },
     {
-        icon: <ISecondDish />,
+        icon: SecondCourses,
         body: 'Вторые блюда',
         listItems: [
             'Мясные',
@@ -79,7 +79,7 @@ export const content: IContent[] = [
         id: 4,
     },
     {
-        icon: <IDesserts />,
+        icon: Desserts,
         body: 'Десерты, выпечка',
         listItems: [
             'Блины и оладьи',
@@ -99,13 +99,13 @@ export const content: IContent[] = [
         id: 5,
     },
     {
-        icon: <IGrill />,
+        icon: Grils,
         body: 'Блюда на гриле',
         listItems: ['Говядина', 'Свинина', 'Птица', 'Рыба', 'Грибы', 'Овощи'],
         id: 6,
     },
     {
-        icon: <IVegan />,
+        icon: Vegan,
         body: 'Веганская кухня',
         linkTo: '/vegan',
         listItems: [
@@ -122,7 +122,7 @@ export const content: IContent[] = [
         dataTestId: 'juiciest-link',
     },
     {
-        icon: <IKids />,
+        icon: KidsCourses,
         body: 'Детские блюда',
         listItems: [
             'Первые блюда',
@@ -137,7 +137,7 @@ export const content: IContent[] = [
         id: 8,
     },
     {
-        icon: <IHealth />,
+        icon: TherapeuticNutrition,
         body: 'Лечебное питание',
         listItems: [
             'Детская диета',
@@ -160,7 +160,7 @@ export const content: IContent[] = [
         id: 9,
     },
     {
-        icon: <INational />,
+        icon: National,
         body: 'Национальные',
         listItems: [
             'Американская кухня',
@@ -183,13 +183,13 @@ export const content: IContent[] = [
         id: 10,
     },
     {
-        icon: <ISause />,
+        icon: Sauces,
         body: 'Соусы',
         listItems: ['Соусы мясные', 'Соусы сырные', 'Маринады'],
         id: 11,
     },
     {
-        icon: <IDrinks />,
+        icon: Drinks,
         body: 'Напитки',
         listItems: [
             'Соки и фреши',
@@ -205,7 +205,7 @@ export const content: IContent[] = [
         id: 12,
     },
     {
-        icon: <IJar />,
+        icon: Preparations,
         body: 'Заготовки',
         listItems: [
             'Соки и фреши',
