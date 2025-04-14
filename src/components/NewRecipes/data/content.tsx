@@ -13,6 +13,7 @@ interface IContent {
     iconLikes?: ReactNode;
     likes?: string;
     id: number;
+    bgColorTag: string;
 }
 
 export const content: IContent[] = [
@@ -24,6 +25,7 @@ export const content: IContent[] = [
         category: 'Первые блюда',
         iconSave: <IBookMark />,
         save: '1',
+        bgColorTag: 'lime.150',
         id: 1,
     },
     {
@@ -36,6 +38,7 @@ export const content: IContent[] = [
         save: '2',
         iconLikes: <ISmile />,
         likes: '1',
+        bgColorTag: 'lime.150',
         id: 2,
     },
     {
@@ -46,6 +49,7 @@ export const content: IContent[] = [
         category: 'Десерты, выпечка',
         iconLikes: <ISmile />,
         likes: '1',
+        bgColorTag: 'lime.150',
         id: 3,
     },
     {
@@ -54,6 +58,7 @@ export const content: IContent[] = [
         text: 'Сельдерей очень полезен для здоровья, пора набираться витаминов. Не  салат, а сплошное удовольствие:) Вкусный, необычный, а главное быстрый.',
         icon: <ISalad />,
         category: 'Салаты',
+        bgColorTag: 'lime.150',
         id: 4,
     },
     {
@@ -64,6 +69,7 @@ export const content: IContent[] = [
         category: 'Десерты, выпечка',
         iconLikes: <ISmile />,
         likes: '1',
+        bgColorTag: 'lime.150',
         id: 5,
     },
 ];

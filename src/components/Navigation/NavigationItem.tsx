@@ -73,6 +73,7 @@ export const NavigationItem = ({ icon, body, listItems, linkTo = '/' }: Props) =
                                                 w: '8px',
                                                 left: '33px',
                                             },
+                                            fontWeight: '700',
                                         }}
                                         _hover={{
                                             bg: 'lime.50',

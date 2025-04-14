@@ -31,7 +31,6 @@ export const content: IContent[] = [
         body: 'Салаты',
         listItems: ['Мясные салаты', 'Рыбные салаты', 'Овощные салаты', 'Теплые салаты'],
         id: 1,
-        dataTestId: '',
     },
     {
         icon: <ISnacks />,
@@ -45,7 +44,6 @@ export const content: IContent[] = [
             'Фастфуд',
         ],
         id: 2,
-        dataTestId: '',
     },
     {
         icon: <IEntree />,
@@ -60,7 +58,6 @@ export const content: IContent[] = [
             'Компонент',
         ],
         id: 3,
-        dataTestId: '',
     },
     {
         icon: <ISecondDish />,
@@ -80,7 +77,6 @@ export const content: IContent[] = [
             'Суши',
         ],
         id: 4,
-        dataTestId: '',
     },
     {
         icon: <IDesserts />,
@@ -101,7 +97,6 @@ export const content: IContent[] = [
             'Кремы',
         ],
         id: 5,
-        dataTestId: '',
     },
     {
         icon: <IGrill />,
@@ -140,7 +135,6 @@ export const content: IContent[] = [
             'Блюда для прикорма',
         ],
         id: 8,
-        dataTestId: '',
     },
     {
         icon: <IHealth />,
@@ -164,7 +158,6 @@ export const content: IContent[] = [
             'Без аллергенов',
         ],
         id: 9,
-        dataTestId: '',
     },
     {
         icon: <INational />,
@@ -188,14 +181,12 @@ export const content: IContent[] = [
             'Другая кухня',
         ],
         id: 10,
-        dataTestId: '',
     },
     {
         icon: <ISause />,
         body: 'Соусы',
         listItems: ['Соусы мясные', 'Соусы сырные', 'Маринады'],
         id: 11,
-        dataTestId: '',
     },
     {
         icon: <IDrinks />,
@@ -212,7 +203,6 @@ export const content: IContent[] = [
             'Алкогольные',
         ],
         id: 12,
-        dataTestId: '',
     },
     {
         icon: <IJar />,
@@ -229,6 +219,5 @@ export const content: IContent[] = [
             'Алкогольные',
         ],
         id: 13,
-        dataTestId: '',
     },
 ];

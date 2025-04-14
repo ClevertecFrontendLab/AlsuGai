@@ -7,7 +7,7 @@ export interface TitleProps extends TextProps {
 
 function TitleH2({ children }: TextProps) {
     return (
-        <Text as='h2' fontSize='5xl' fontWeight='medium'>
+        <Text as='h2' fontSize={{ base: '2xl', xl: '4xl', '2xl': '5xl' }} fontWeight='medium'>
             {children}
         </Text>
     );
